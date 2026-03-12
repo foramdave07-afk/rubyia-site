@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>RubyIA Catalog</title>
+<link rel="stylesheet" href="/assets/styles.css" />
+<style>
+  .toolbar{display:flex;flex-wrap:wrap;gap:.5rem;padding:.5rem 1rem;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:10}
+  .toolbar select,.toolbar input[type=search]{padding:.5rem .6rem;border:1px solid var(--border);border-radius:8px}
+  .toolbar .spacer{flex:1}
+  .pill{background:#f3f4f6;border:1px solid var(--border);border-radius:999px;padding:.35rem .6rem;display:flex;gap:.4rem;align-items:center}
+  #moreWrap{display:flex;justify-content:center;padding:1rem}
+  #moreWrap button{border:1px solid var(--border);padding:.6rem 1rem;border-radius:8px;background:#fff}
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <div class="logo" style="display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.8rem">RI</div>
+      <div class="title">Ruby International Associates — Catalog</div>
+    </div>
+    <div class="controls">
+      <a class="btn" href="/pages/quote.html">Open Quotation</a>
+    </div>
+  </div>
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="Search (optional)" />
+    <select id="f_group"><option value="">All Groups</option></select>
+    <select id="f_brand"><option value="">All Brands</option></select>
+    <select id="f_country"><option value="">All Countries</option></select>
+    <select id="f_sort">
+      <option value="name">Sort: Name (A→Z)</option>
+      <option value="brand">Sort: Brand</option>
+      <option value="country">Sort: Country</option>
+    </select>
+    <span class="spacer"></span>
+    <label class="pill"><input type="checkbox" id="toggle_select"/> Select</label>
+    <button class="btn" id="btn_add_selected" disabled>Add Selected (<span id="sel_count">0</span>)</button>
+    <a class="btn" href="/pages/quote.html">Open Quotation</a>
+  </div>
+
+  <section class="grid" id="grid"></section>
+  <div id="moreWrap"><button id="btn_more" style="display:none">Load more</button></div>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
