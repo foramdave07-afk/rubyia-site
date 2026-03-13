@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>RubyIA Catalog</title>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <div class="logo">RI</div>
+      <div class="title">Ruby International Associates — Catalog</div>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="Search (optional)"/>
+    <select id="f_group"><option value="">All Groups</option></select>
+    <select id="f_brand"><option value="">All Brands</option></select>
+    <select id="f_country"><option value="">All Countries</option></select>
+    <select id="f_sort">
+      <option value="name">Sort: Name (A→Z)</option>
+      <option value="brand">Sort: Brand</option>
+      <option value="country">Sort: Country</option>
+    </select>
+    <span style="flex:1"></span>
+    <label style="display:flex;align-items:center;gap:.35rem"><input type="checkbox" id="toggle_select"/> Select</label>
+    <button class="btn" id="btn_add_selected" disabled>Add Selected (<span id="sel_count">0</span>)</button>
+    <a class="btn" href="/pages/quote.html">Open Quotation</a>
+  </div>
+
+  <section class="grid" id="grid"></section>
+  <div style="display:flex;justify-content:center;padding:1rem">
+    <button class="btn" id="btn_more" style="display:none">Load more</button>
+  </div>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
