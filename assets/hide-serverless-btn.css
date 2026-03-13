@@ -1,0 +1,3 @@
+
+/* Global styles + hide legacy serverless (HTML attached) button if present */
+#btn_email_fn { display:none !important; }

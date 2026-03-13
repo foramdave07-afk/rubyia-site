@@ -1,0 +1,15 @@
+
+<!doctype html><meta charset="utf-8"><title>Catalog</title>
+<link rel="stylesheet" href="/assets/hide-serverless-btn.css">
+<div class="toolbar">
+  <input id="q" placeholder="Search"> 
+  <select id="f_group"><option value="">All Groups</option></select>
+  <select id="f_brand"><option value="">All Brands</option></select>
+  <select id="f_country"><option value="">All Countries</option></select>
+  <select id="f_sort"><option value="name">Sort: Name</option><option value="brand">Brand</option><option value="country">Country</option></select>
+  <label><input type="checkbox" id="toggle_select" checked> Select</label>
+  <button id="btn_add_selected" disabled>Add Selected (<span id="sel_count">0</span>)</button>
+  <a href="/pages/quote.html">Open Quotation</a>
+</div>
+<section id="grid"></section><button id="btn_more" style="display:none">More</button>
+<script src="/assets/app.js"></script>

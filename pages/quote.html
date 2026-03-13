@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Quotation | RubyIA</title>
+  <link rel="stylesheet" href="/assets/hide-serverless-btn.css"/>
+</head>
+<body>
+  <div style="max-width:900px;margin:0 auto;padding:16px;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+    <h2>Send Quotation (Excel/PDF → Email)</h2>
+    <p>Upload your <strong>Excel</strong> (XLSX/XLSM/XLS) <em>or</em> a pre-exported <strong>PDF</strong>. If PDF is uploaded, we <strong>attach it as-is</strong> (no conversion) to preserve layout 1:1.</p>
+    <form id="excelSendForm" style="display:grid;gap:.6rem">
+      <label>File (Excel or PDF)<br><input type="file" id="xf" name="file" accept=".pdf,.xlsx,.xlsm,.xls" required></label>
+      <label>To (recipient)<br><input id="to" name="to" type="email" required placeholder="customer@example.com"></label>
+      <label>Subject<br><input id="subject" name="subject" placeholder="Quotation"></label>
+      <label>From (optional)<br><input id="from" name="from" placeholder="defaults to verified sender"></label>
+      <label>Reply‑To (optional)<br><input id="replyTo" name="replyTo" placeholder="defaults to verified sender"></label>
+      <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+        <button type="submit" class="btn primary">Send</button>
+        <button type="button" id="btn_download_pdf" class="btn">Download PDF</button>
+        <a class="btn" href="/">Back to Catalog</a>
+      </div>
+    </form>
+    <div id="status" style="margin-top:.8rem;padding:.6rem;border:1px solid #e5e7eb;border-radius:8px;display:none"></div>
+  </div>
+  <script src="/assets/quote-upload.js"></script>
+</body>
+</html>
